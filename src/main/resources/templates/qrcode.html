@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</head>
+<body style="margin-top: 200px;text-align: center;">
+<div class="modal-body">
+
+
+    <p>Scan the QR-code</p>
+
+    <div class="text-center">
+
+        <img  id="image" th:src="${token}"/>
+
+    </div>
+</div>
+<div class="modal-footer">
+    <button id="btnRegisterDone" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+</div>
+
+<script>
+
+    $("#btnRegisterDone").click(function () {
+        window.location.href = "/login";
+    })
+
+</script>
+
+
+</body>
+</html>
